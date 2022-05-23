@@ -22,7 +22,7 @@ contract Webpai{
 
     function addNewMessage(string calldata topic, string calldata message, string calldata ipfsid) public {
         
-        require(bytes(message).length > 0, "send more money");
+        require(bytes(message).length > 0, "Error: empty massage field");
         
         Message memory newMessage = Message({
             id: idCounter,
